@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
+:root {
+  --primary: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 8%);
+  --card-bg: hsl(0, 0%, 12%);
+  --btn-bg: hsl(0, 0%, 20%);
+}
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  position: relative;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+h1 {
+  color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  width: 300px;
+  border-radius: 16px;
+  background-color: var(--card-bg);
+}
+
+.image-wrapper {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.name {
+  font-size: 2rem;
+  margin-top: 24px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.location {
+  margin-bottom: 24px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.introduction {
+  margin-bottom: 1rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.links__item {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.links__item a {
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: var(--btn-bg);
+  font-weight: 600;
+}
+.links__item a:hover {
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: var(--primary);
+  color: var(--black);
+  font-weight: 600;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media all and (max-width: 420px) {
+  .card {
+    padding: calc((24 / 375) * 100vw);
+    width: auto;
+  }
+}
